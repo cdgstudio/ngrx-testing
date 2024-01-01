@@ -2,7 +2,7 @@
   @switch (state.status) {
     @case ('LOADED') {
       <ul>
-        @for (toDo of state.toDos; track toDo.id) {
+        @for (toDo of state.tasks; track toDo.id) {
           <li>{{ toDo.title }}</li>
         }
       </ul>
