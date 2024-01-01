@@ -5,13 +5,13 @@ import { provideState, provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { provideHttpClient } from '@angular/common/http';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-import { TasksEffects, booksFeature } from './store/task';
+import { TasksEffects, taskFeature } from './store/task';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideStore(),
-    provideState(booksFeature),
+    provideState(taskFeature),
     provideEffects(TasksEffects),
     provideHttpClient(),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),
